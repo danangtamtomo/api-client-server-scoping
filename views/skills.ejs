@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Skills</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+<body>
+    <% if (newTitle !== '') { %>
+        <h1><%= newTitle %></h1>
+    <% } %>
+    <form action="skills" method="get">
+        New Title = <input name="newtitle" type="text"> <br>
+        <input type="submit" value="Change Title">
+    </form>
+</body>
+</html>

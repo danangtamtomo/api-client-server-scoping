@@ -3,9 +3,17 @@
   <head>
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    <h1>This is a title</h1>
+    <p>I expect to be the title too</p>
+    <button data-heading="<%= newTitle %>" id="titleChanger">Title Changer</button>
   </body>
+  <script>
+    $('#titleChanger').on('click', function () {
+      $('h1').html($('#titleChanger').data('heading'))
+      $('p').html($('#titleChanger').data('heading'))
+    })
+  </script>
 </html>

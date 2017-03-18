@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+<body>
+<h1>This is a title</h1>
+<p>I expect to be the title too</p>
+<button id="titleChanger">Title Changer</button>
+</body>
+<script>
+   var meals = ['Martabak', 'Duren', 'Semangka', 'Bakso']
+  $('#titleChanger').on('click', function () {
+    $('h1').html(meals[Math.round(Math.random() * (meals.length - 1) + 1 )])
+    $('p').html(meals[Math.round(Math.random() * (meals.length - 1) + 1 )])
+  })
+</script>
+</html>
